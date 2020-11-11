@@ -2,9 +2,7 @@ import knex from 'knex';
 
 export async function up(knex: knex) {
     return knex.schema.createTable('connections', table =>{
-        table.increments('id').primary();
-
-    
+        table.increments('id').primary();  
 
 
         table.integer('user_id')
@@ -15,7 +13,7 @@ export async function up(knex: knex) {
             .onDelete('CASCADE');
             
         table.timestamp('created_at')
-        .defaultTo('now()')
+        .defaultTo(knex.raw('CURRENT_TIMESTAMP'))
         .notNullable();
 
     });
