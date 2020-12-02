@@ -10,6 +10,7 @@ function TeacherItem(){
                         <div>
                             <strong>Víctor Madrid Davanço</strong>
                             <span>Programação</span>
+                            
                         </div>
                     </header>
                     <p>Sempre em busca por novos desafios! 
